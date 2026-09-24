@@ -9,6 +9,13 @@ import { RouterView } from "vue-router";
     <AppBar />
 
     <!-- Content -->
-    <RouterView />
+    <UPage
+      :ui="{
+        center:
+          'flex flex-col min-h-[calc(100dvh-4rem)] gap-y-10 items-center justify-center',
+      }"
+    >
+      <RouterView />
+    </UPage>
   </UApp>
 </template>
