@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import Main from "./components/Main.vue";
+import AppBar from "./components/AppBar.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <Main />
+  <UApp>
+    <!-- Nav Bar / App Bar -->
+    <AppBar />
+
+    <!-- Content -->
+    <RouterView />
+  </UApp>
 </template>

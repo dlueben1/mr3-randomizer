@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Auto-generated type declarations (from Nuxt UI setup guide)
+auto-imports.d.ts
+components.d.ts
+
