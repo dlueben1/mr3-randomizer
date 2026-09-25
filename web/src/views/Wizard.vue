@@ -13,12 +13,12 @@ const difficultyOptions = ref<RadioGroupItem[]>([
       "Non-Rival Opponents will have the same number of moves, traits, and total stats per the average monster in their rank",
     value: "normal",
   },
-  {
-    label: "Hard",
-    description:
-      "Non-Rival Opponents will can have more moves, traits, and higher total stats (up to 25% more) than the average monster in their rank",
-    value: "hard",
-  },
+  // {
+  //   label: "Hard",
+  //   description:
+  //     "Non-Rival Opponents will can have more moves, traits, and higher total stats (up to 25% more) than the average monster in their rank",
+  //   value: "hard",
+  // },
 ]);
 
 const difficulty = ref("normal");
@@ -43,9 +43,22 @@ type RandomizationState = "idle" | "running" | "complete" | "error";
 const randomizationState = ref<RandomizationState>("idle");
 const randomizationError = ref<string | null>(null);
 
+const randomizedFile = ref<File | null>(null);
+const isPreparingDownload = ref(false);
+
 const progressPercent = computed(() =>
   Math.round(randomizationProgress.value * 100),
 );
+
+const randomizedIsoSize = computed(() => {
+  const file = randomizedFile.value;
+
+  if (!file) {
+    return null;
+  }
+
+  return `${(file.size / 1024 ** 3).toFixed(2)} GB`;
+});
 
 /*
  * Deletes the randomized ISO from OPFS.
@@ -203,10 +216,10 @@ async function startRandomization() {
     );
 
     pendingCleanup = cleanup;
-
-    downloadFile(file, "MR3-Randomized.iso");
+    randomizedFile.value = file;
 
     randomizationState.value = "complete";
+    currentStep.value = 5;
   } catch (error) {
     console.error("Randomization failed:", error);
 
@@ -218,6 +231,7 @@ async function startRandomization() {
 
 function retryRandomization() {
   randomizationState.value = "idle";
+  randomizedFile.value = null;
 
   void startRandomization();
 }
@@ -225,8 +239,36 @@ function retryRandomization() {
 function backToSettings() {
   randomizationState.value = "idle";
   randomizationError.value = null;
+  randomizedFile.value = null;
+
+  /*
+   * Going back discards the randomized ISO.
+   * Re-randomizing produces a fresh one anyway.
+   */
+  void discardRandomizedIso();
 
   currentStep.value = 3;
+}
+
+function downloadRandomizedIso(): void {
+  const file = randomizedFile.value;
+
+  if (!file || isPreparingDownload.value) {
+    return;
+  }
+
+  isPreparingDownload.value = true;
+  downloadFile(file, "MR3-Randomized.iso");
+
+  /*
+   * The browser copies the full ISO out of OPFS before
+   * the download begins, with no progress signal exposed.
+   * Keep the loading state for a while so it is clear
+   * that something is happening, then allow a retry.
+   */
+  setTimeout(() => {
+    isPreparingDownload.value = false;
+  }, 15_000);
 }
 
 async function hasFreeStorage(requiredBytes: number): Promise<boolean> {
@@ -284,7 +326,7 @@ onBeforeRouteLeave(async () => {
   const message =
     randomizationState.value === "running"
       ? "Randomization is still in progress. If you leave now, it will be cancelled and its temporary files will be discarded. Leave anyway?"
-      : "Your randomized ISO has not finished downloading. If you leave now, the download may be interrupted and its temporary files will be discarded. Leave anyway?";
+      : "Your randomized ISO has not been downloaded yet, or its download is still in progress. If you leave now, the download may be interrupted and its temporary files will be discarded. Leave anyway?";
 
   if (!window.confirm(message)) {
     return false;
@@ -310,10 +352,14 @@ function downloadFile(file: File, filename: string): void {
   /*
    * Don't revoke synchronously.
    * Let the browser start consuming it first.
+   *
+   * The ISO is large enough that the download can take
+   * several minutes, so keep the blob alive well past
+   * the point where the download begins.
    */
   setTimeout(() => {
     URL.revokeObjectURL(url);
-  }, 60_000);
+  }, 600_000);
 }
 </script>
 
@@ -505,16 +551,6 @@ function downloadFile(file: File, filename: string): void {
         </template>
 
         <UAlert
-          v-else-if="randomizationState === 'complete'"
-          class="w-full text-left"
-          color="success"
-          variant="subtle"
-          icon="i-lucide-circle-check"
-          title="Randomization complete."
-          description="Your download has started. Temporary files are cleaned up when you leave this page."
-        />
-
-        <UAlert
           v-else-if="randomizationState === 'error'"
           class="w-full text-left"
           color="error"
@@ -525,17 +561,80 @@ function downloadFile(file: File, filename: string): void {
         />
 
         <section
-          v-if="randomizationState !== 'running'"
+          v-if="randomizationState === 'error'"
           class="flex flex-row-reverse gap-x-3 self-end"
         >
           <UButton
-            v-if="randomizationState === 'error'"
             icon="i-lucide-rotate-ccw"
             size="md"
             class="cursor-pointer"
             @click="retryRandomization"
           >
             Retry
+          </UButton>
+
+          <UButton
+            variant="outline"
+            size="md"
+            class="cursor-pointer"
+            @click="backToSettings"
+          >
+            Back
+          </UButton>
+        </section>
+      </div>
+    </template>
+  </UPageCard>
+
+  <!-- Step 5. Download your ISO -->
+  <UPageCard
+    v-if="currentStep === 5"
+    title="Download your ISO"
+    icon="i-lucide-download"
+    class="w-lg"
+    :ui="{ body: 'w-full' }"
+  >
+    <template #description>
+      <div class="flex flex-col gap-y-4">
+        <UAlert
+          color="success"
+          variant="subtle"
+          icon="i-lucide-circle-check"
+          title="Randomization complete."
+          description="Temporary files are cleaned up when you leave this page."
+        />
+
+        <div
+          class="flex items-center gap-x-3 rounded-lg border border-default p-3"
+        >
+          <UIcon name="i-lucide-disc-3" class="size-8 shrink-0 text-primary" />
+
+          <div class="flex min-w-0 flex-col">
+            <span class="truncate font-medium">MR3-Randomized.iso</span>
+            <span v-if="randomizedIsoSize" class="text-sm text-muted">
+              {{ randomizedIsoSize }}
+            </span>
+          </div>
+        </div>
+
+        <UAlert
+          color="warning"
+          variant="subtle"
+          icon="i-lucide-hourglass"
+          title="Please be patient after clicking download."
+          description="The ISO is large, so your browser may take up to a minute to prepare it before the download begins. The page may appear unresponsive during this time. This is normal."
+        />
+
+        <section class="flex flex-row-reverse gap-x-3">
+          <UButton
+            icon="i-lucide-download"
+            size="md"
+            class="cursor-pointer"
+            :loading="isPreparingDownload"
+            :disabled="!randomizedFile"
+            @click="downloadRandomizedIso"
+          >
+            {{ isPreparingDownload ? "Preparing download" : "Download ISO" }}
           </UButton>
 
           <UButton

@@ -22,7 +22,10 @@ export async function randomizeIso(
   onProgress?.(0);
 
   // Phase #1: Create Patches to apply
-  const nonRivalMonsterPatches = await randomizeNonRivalMonsters(source);
+  const nonRivalMonsterPatches = await randomizeNonRivalMonsters(
+    source,
+    logger,
+  );
 
   // Merge all patches into a single array
   const allPatches = [...nonRivalMonsterPatches];
@@ -53,4 +56,6 @@ export async function randomizeIso(
 
   // Save & Finish!
   await output.close();
+  logger?.("Finished randomization of ISO!");
+  onProgress?.(1);
 }
