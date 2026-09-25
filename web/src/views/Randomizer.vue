@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { createSHA256 } from "hash-wasm";
 import type { RadioGroupItem } from "@nuxt/ui";
+import GuideRippingButton from "../components/guides/GuideRippingButton.vue";
 
 const difficultyOptions = ref<RadioGroupItem[]>([
   {
@@ -16,9 +18,134 @@ const difficultyOptions = ref<RadioGroupItem[]>([
     value: "hard",
   },
 ]);
-const difficulty = ref("normal");
 
+const difficulty = ref("normal");
 const currentStep = ref<number>(1);
+
+const EXPECTED_MR3_SHA256 =
+  "7e21aa098e18bc5bc242de3fe770cac042f50bc8100b71588c84b5e2dc3c3a43".toLowerCase();
+
+type IsoValidationState = "idle" | "validating" | "valid" | "invalid" | "error";
+
+const selectedIso = ref<File | null>(null);
+const validatedIso = ref<File | null>(null);
+
+const isoValidationState = ref<IsoValidationState>("idle");
+const detectedIsoHash = ref<string | null>(null);
+const isoValidationError = ref<string | null>(null);
+
+/*
+ * Incremented whenever the selected file changes.
+ *
+ * This prevents an older validation from finishing later
+ * and overwriting the state for a newer file.
+ */
+let validationGeneration = 0;
+
+async function hashFileSha256(
+  file: File,
+  generation: number,
+): Promise<string | null> {
+  const hasher = await createSHA256();
+  hasher.init();
+
+  const reader = file.stream().getReader();
+
+  try {
+    while (true) {
+      /*
+       * If another file was selected while this one was
+       * hashing, stop this validation.
+       */
+      if (generation !== validationGeneration) {
+        await reader.cancel();
+        return null;
+      }
+
+      const { done, value } = await reader.read();
+
+      if (done) {
+        break;
+      }
+
+      /*
+       * Only the current stream chunk is held in memory.
+       */
+      hasher.update(value);
+    }
+
+    if (generation !== validationGeneration) {
+      return null;
+    }
+
+    return hasher.digest("hex").toLowerCase() as string;
+  } finally {
+    reader.releaseLock();
+  }
+}
+
+watch(selectedIso, async (file) => {
+  const generation = ++validationGeneration;
+
+  validatedIso.value = null;
+  detectedIsoHash.value = null;
+  isoValidationError.value = null;
+
+  if (!file) {
+    isoValidationState.value = "idle";
+    return;
+  }
+
+  if (!file.name.toLowerCase().endsWith(".iso")) {
+    isoValidationState.value = "invalid";
+    isoValidationError.value = "Please select an .iso file.";
+    return;
+  }
+
+  isoValidationState.value = "validating";
+
+  try {
+    const hash = await hashFileSha256(file, generation);
+
+    /*
+     * This validation was superseded by another file.
+     */
+    if (hash === null || generation !== validationGeneration) {
+      return;
+    }
+
+    detectedIsoHash.value = hash;
+
+    if (hash !== EXPECTED_MR3_SHA256) {
+      isoValidationState.value = "invalid";
+      isoValidationError.value =
+        "This ISO could not be validated. Its SHA-256 does not match the supported Monster Rancher 3 ISO.";
+
+      return;
+    }
+
+    validatedIso.value = file;
+    isoValidationState.value = "valid";
+  } catch (error) {
+    if (generation !== validationGeneration) {
+      return;
+    }
+
+    console.error("Failed to validate ISO:", error);
+
+    isoValidationState.value = "error";
+    isoValidationError.value =
+      "The ISO could not be validated. Please try selecting it again.";
+  }
+});
+
+function continueFromIsoStep() {
+  if (isoValidationState.value !== "valid" || !validatedIso.value) {
+    return;
+  }
+
+  currentStep.value = 3;
+}
 </script>
 
 <template>
@@ -72,16 +199,7 @@ const currentStep = ref<number>(1);
         >
           I Understand
         </UButton>
-        <UButton
-          icon="i-lucide-circle-question-mark"
-          size="md"
-          class="cursor-pointer"
-          color="primary"
-          variant="subtle"
-          to="https://pcsx2.net/docs/setup/discs/"
-        >
-          Guide: Ripping your ISO
-        </UButton>
+        <GuideRippingButton />
       </section>
     </template>
   </UPageCard>
@@ -96,26 +214,77 @@ const currentStep = ref<number>(1);
   >
     <template #description>
       <UFileUpload
+        v-model="selectedIso"
         position="inside"
         layout="list"
-        multiple
         accept=".iso"
         label="Drop your MR3 .ISO here"
-        description="Must be a legal v1.1 MR3 ISO"
+        description="Must be a legal supported MR3 ISO"
         class="w-full"
         :ui="{
           base: 'min-h-48',
         }"
       />
+
+      <!-- Successful validation -->
+      <UAlert
+        v-if="isoValidationState === 'valid'"
+        class="mt-3"
+        color="success"
+        variant="subtle"
+        icon="i-lucide-circle-check"
+        title="ISO successfully validated."
+      />
+
+      <!-- Invalid hash -->
+      <UAlert
+        v-else-if="isoValidationState === 'invalid'"
+        class="mt-3"
+        color="error"
+        variant="subtle"
+        icon="i-lucide-triangle-alert"
+        title="ISO could not be validated."
+      >
+        <template #description>
+          <p>
+            {{ isoValidationError }}
+          </p>
+
+          <p v-if="detectedIsoHash" class="mt-2 break-all font-mono text-xs">
+            Detected SHA-256:
+            {{ detectedIsoHash }}
+          </p>
+        </template>
+      </UAlert>
+
+      <!-- Unexpected hashing error -->
+      <UAlert
+        v-else-if="isoValidationState === 'error'"
+        class="mt-3"
+        color="error"
+        variant="subtle"
+        icon="i-lucide-triangle-alert"
+        title="Validation failed."
+        :description="isoValidationError ?? undefined"
+      />
+
       <section class="flex flex-row-reverse gap-x-3 pt-4">
         <UButton
-          icon="i-lucide-arrow-right"
+          :icon="
+            isoValidationState === 'validating'
+              ? undefined
+              : 'i-lucide-arrow-right'
+          "
+          :loading="isoValidationState === 'validating'"
+          :disabled="isoValidationState !== 'valid'"
           size="md"
           class="cursor-pointer"
-          @click="currentStep = 3"
+          @click="continueFromIsoStep"
         >
-          Continue
+          {{ isoValidationState === "validating" ? "Validating" : "Continue" }}
         </UButton>
+
+        <GuideRippingButton />
       </section>
     </template>
   </UPageCard>

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, useId } from 'vue'
+import { computed, ref, useId } from "vue";
 
 const props = defineProps({
   size: { type: [Number, String], default: 280 },
@@ -8,34 +8,36 @@ const props = defineProps({
   introDuration: { type: Number, default: 7000 },
   spinDuration: { type: Number, default: 3800 },
   transformDuration: { type: Number, default: 2200 },
-})
+});
 
 // Instance-specific SVG IDs allow several loaders on the same page (and SSR).
-const id = `disc-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`
-const run = ref(0)
-const running = ref(props.autoStart)
+const id = `disc-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
+const run = ref(0);
+const running = ref(props.autoStart);
 const pieces = [
-  { angle: 0, color: '#60baff' },
-  { angle: 90, color: '#ff617f' },
-  { angle: 180, color: '#63e6a0' },
-  { angle: 270, color: '#ffdc62' },
-]
+  { angle: 0, color: "#60baff" },
+  { angle: 90, color: "#ff617f" },
+  { angle: 180, color: "#63e6a0" },
+  { angle: 270, color: "#ffdc62" },
+];
 
 const style = computed(() => ({
-  '--size': typeof props.size === 'number' ? `${props.size}px` : props.size,
-  '--intro': `${Math.max(0, props.introDuration)}ms`,
-  '--spin': `${Math.max(1, props.spinDuration)}ms`,
-  '--swap': `${Math.max(1, props.transformDuration)}ms`,
-  '--play': running.value ? 'running' : 'paused',
-}))
+  "--size": typeof props.size === "number" ? `${props.size}px` : props.size,
+  "--intro": `${Math.max(0, props.introDuration)}ms`,
+  "--spin": `${Math.max(1, props.spinDuration)}ms`,
+  "--swap": `${Math.max(1, props.transformDuration)}ms`,
+  "--play": running.value ? "running" : "paused",
+}));
 
 // autoStart selects the initial state. start() resumes; replay() starts over.
-function start() { running.value = true }
-function replay() {
-  run.value += 1
-  running.value = true
+function start() {
+  running.value = true;
 }
-defineExpose({ start, replay })
+function replay() {
+  run.value += 1;
+  running.value = true;
+}
+defineExpose({ start, replay });
 </script>
 
 <template>
@@ -52,7 +54,9 @@ defineExpose({ start, replay })
         <defs>
           <!-- An exact quarter of an annulus: the hole is truly transparent. -->
           <clipPath :id="`${id}-wedge`" clipPathUnits="userSpaceOnUse">
-            <path d="M120 30 A90 90 0 0 1 210 120 L136 120 A16 16 0 0 0 120 104 Z" />
+            <path
+              d="M120 30 A90 90 0 0 1 210 120 L136 120 A16 16 0 0 0 120 104 Z"
+            />
           </clipPath>
           <radialGradient :id="`${id}-metal`">
             <stop offset="0" stop-color="#061839" stop-opacity=".75" />
@@ -83,30 +87,70 @@ defineExpose({ start, replay })
             <!-- Fine concentric grooves and a metallic hub. -->
             <g fill="none" stroke="#eefaff">
               <circle cx="120" cy="120" r="89" stroke-width=".8" opacity=".8" />
-              <circle cx="120" cy="120" r="85" stroke-width=".35" opacity=".5" />
-              <circle v-for="r in [36, 42, 48, 54, 60, 66, 72, 78, 82]" :key="r"
-                cx="120" cy="120" :r="r" stroke-width=".25" opacity=".22" />
+              <circle
+                cx="120"
+                cy="120"
+                r="85"
+                stroke-width=".35"
+                opacity=".5"
+              />
+              <circle
+                v-for="r in [36, 42, 48, 54, 60, 66, 72, 78, 82]"
+                :key="r"
+                cx="120"
+                cy="120"
+                :r="r"
+                stroke-width=".25"
+                opacity=".22"
+              />
               <circle cx="120" cy="120" r="26" stroke-width="1" opacity=".65" />
-              <circle cx="120" cy="120" r="22" stroke-width=".5" opacity=".75" />
-              <circle cx="120" cy="120" r="16.8" stroke-width="1.4" opacity=".85" />
+              <circle
+                cx="120"
+                cy="120"
+                r="22"
+                stroke-width=".5"
+                opacity=".75"
+              />
+              <circle
+                cx="120"
+                cy="120"
+                r="16.8"
+                stroke-width="1.4"
+                opacity=".85"
+              />
             </g>
-            <path d="M51 86 A77 77 0 0 1 100 46" fill="none"
-              stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".75" />
+            <path
+              d="M51 86 A77 77 0 0 1 100 46"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              opacity=".75"
+            />
           </g>
         </defs>
 
-        <g v-for="(piece, index) in pieces" :key="piece.angle"
+        <g
+          v-for="(piece, index) in pieces"
+          :key="piece.angle"
           :transform="`rotate(${piece.angle} 120 120)`"
-          :style="{ '--stagger': (index - 1) * 0.07 }">
+          :style="{ '--stagger': (index - 1) * 0.07 }"
+        >
           <g :class="index === 0 ? 'disc-kept' : 'disc-out'" color="#60baff">
             <g :clip-path="`url(#${id}-wedge)`">
               <!-- Counter-rotate the finish so blue wedges form one seamless disc. -->
-              <use :href="`#${id}-surface`" :transform="`rotate(${-piece.angle} 120 120)`" />
+              <use
+                :href="`#${id}-surface`"
+                :transform="`rotate(${-piece.angle} 120 120)`"
+              />
             </g>
           </g>
           <g v-if="index !== 0" class="disc-in" :color="piece.color">
             <g :clip-path="`url(#${id}-wedge)`">
-              <use :href="`#${id}-surface`" :transform="`rotate(${-piece.angle} 120 120)`" />
+              <use
+                :href="`#${id}-surface`"
+                :transform="`rotate(${-piece.angle} 120 120)`"
+              />
             </g>
           </g>
         </g>
@@ -167,40 +211,75 @@ defineExpose({ start, replay })
 
 .disc-out {
   animation-name: disc-depart;
-  animation-duration: calc(var(--swap) * .39);
+  animation-duration: calc(var(--swap) * 0.39);
   animation-delay: calc(var(--intro) + var(--swap) * var(--stagger));
-  animation-timing-function: cubic-bezier(.45, 0, .7, .5);
+  animation-timing-function: cubic-bezier(0.45, 0, 0.7, 0.5);
 }
 
 .disc-in {
   animation-name: disc-arrive;
-  animation-duration: calc(var(--swap) * .52);
-  animation-delay: calc(var(--intro) + var(--swap) * (.34 + var(--stagger)));
-  animation-timing-function: cubic-bezier(.16, .8, .25, 1);
+  animation-duration: calc(var(--swap) * 0.52);
+  animation-delay: calc(var(--intro) + var(--swap) * (0.34 + var(--stagger)));
+  animation-timing-function: cubic-bezier(0.16, 0.8, 0.25, 1);
 }
 
 @keyframes disc-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes disc-depart {
-  0% { transform: translate(0, 0) rotate(0); opacity: 1; }
-  28% { transform: translate(7px, -7px) rotate(3deg); opacity: 1; }
-  85% { opacity: 1; }
-  100% { transform: translate(320px, -320px) rotate(28deg); opacity: 0; }
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
+  28% {
+    transform: translate(7px, -7px) rotate(3deg);
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(320px, -320px) rotate(28deg);
+    opacity: 0;
+  }
 }
 
 @keyframes disc-arrive {
-  0% { transform: translate(320px, -320px) rotate(-24deg); opacity: 0; }
-  12% { opacity: 1; }
-  70% { transform: translate(-3px, 3px) rotate(1deg); opacity: 1; }
-  86% { transform: translate(1px, -1px) rotate(-.4deg); opacity: 1; }
-  100% { transform: translate(0, 0) rotate(0); opacity: 1; }
+  0% {
+    transform: translate(320px, -320px) rotate(-24deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-3px, 3px) rotate(1deg);
+    opacity: 1;
+  }
+  86% {
+    transform: translate(1px, -1px) rotate(-0.4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .disc-spin, .disc-out, .disc-in { animation: none; }
-  .disc-out { opacity: 0; }
-  .disc-in { opacity: 1; }
+  .disc-spin,
+  .disc-out,
+  .disc-in {
+    animation: none;
+  }
+  .disc-out {
+    opacity: 0;
+  }
+  .disc-in {
+    opacity: 1;
+  }
 }
 </style>

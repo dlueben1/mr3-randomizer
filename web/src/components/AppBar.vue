@@ -50,6 +50,7 @@ const navigationItems = computed(getNavigationItems);
     <UNavigationMenu
       :items="navigationItems"
       color="primary"
+      class="[&_ul]:list-none [&_ul]:ps-0"
       content-orientation="vertical"
       :ui="{
         childLinkLabel: 'font-medium',
