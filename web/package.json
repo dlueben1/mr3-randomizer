@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mr3/randomizer": "file:../randomizer",
     "@nuxt/ui": "4.11.2",
     "@tailwindcss/vite": "4.3.3",
     "hash-wasm": "4.12.0",

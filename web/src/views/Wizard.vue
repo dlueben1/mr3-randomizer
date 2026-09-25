@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 import { createSHA256 } from "hash-wasm";
 import type { RadioGroupItem } from "@nuxt/ui";
 import GuideRippingButton from "../components/guides/GuideRippingButton.vue";
+import { randomize } from "../iso/runRandomizer";
 
 const difficultyOptions = ref<RadioGroupItem[]>([
   {
@@ -33,6 +35,32 @@ const validatedIso = ref<File | null>(null);
 const isoValidationState = ref<IsoValidationState>("idle");
 const detectedIsoHash = ref<string | null>(null);
 const isoValidationError = ref<string | null>(null);
+
+const randomizationProgress = ref(0);
+
+type RandomizationState = "idle" | "running" | "complete" | "error";
+
+const randomizationState = ref<RandomizationState>("idle");
+const randomizationError = ref<string | null>(null);
+
+const progressPercent = computed(() =>
+  Math.round(randomizationProgress.value * 100),
+);
+
+/*
+ * Deletes the randomized ISO from OPFS.
+ *
+ * Retained until the tab closes or the user navigates away
+ * from the wizard, so the download is never interrupted
+ * by cleanup.
+ */
+let pendingCleanup: (() => Promise<void>) | null = null;
+
+const hasPendingResources = computed(
+  () =>
+    randomizationState.value === "running" ||
+    (randomizationState.value === "complete" && pendingCleanup !== null),
+);
 
 /*
  * Incremented whenever the selected file changes.
@@ -145,6 +173,147 @@ function continueFromIsoStep() {
   }
 
   currentStep.value = 3;
+}
+
+async function startRandomization() {
+  if (!validatedIso.value || randomizationState.value !== "idle") {
+    return;
+  }
+
+  currentStep.value = 4;
+  randomizationProgress.value = 0;
+  randomizationError.value = null;
+
+  if (!(await hasFreeStorage(validatedIso.value.size))) {
+    randomizationState.value = "error";
+    randomizationError.value =
+      "There is not enough free storage available to randomize this ISO. Free up some disk space and try again.";
+
+    return;
+  }
+
+  randomizationState.value = "running";
+
+  try {
+    const { file, cleanup } = await randomize(
+      validatedIso.value,
+      (progress: number) => {
+        randomizationProgress.value = progress;
+      },
+    );
+
+    pendingCleanup = cleanup;
+
+    downloadFile(file, "MR3-Randomized.iso");
+
+    randomizationState.value = "complete";
+  } catch (error) {
+    console.error("Randomization failed:", error);
+
+    randomizationState.value = "error";
+    randomizationError.value =
+      "The ISO could not be randomized. Please try again.";
+  }
+}
+
+function retryRandomization() {
+  randomizationState.value = "idle";
+
+  void startRandomization();
+}
+
+function backToSettings() {
+  randomizationState.value = "idle";
+  randomizationError.value = null;
+
+  currentStep.value = 3;
+}
+
+async function hasFreeStorage(requiredBytes: number): Promise<boolean> {
+  try {
+    const estimate = await navigator.storage.estimate();
+
+    if (estimate.quota == null || estimate.usage == null) {
+      return true;
+    }
+
+    return estimate.quota - estimate.usage >= requiredBytes;
+  } catch {
+    return true;
+  }
+}
+
+async function discardRandomizedIso() {
+  const cleanup = pendingCleanup;
+  pendingCleanup = null;
+
+  try {
+    await cleanup?.();
+  } catch (error) {
+    console.error("Failed to clean up randomized ISO:", error);
+  }
+}
+
+function onBeforeUnload(event: BeforeUnloadEvent) {
+  if (hasPendingResources.value) {
+    event.preventDefault();
+  }
+}
+
+function onPageHide() {
+  void discardRandomizedIso();
+}
+
+onMounted(() => {
+  window.addEventListener("beforeunload", onBeforeUnload);
+  window.addEventListener("pagehide", onPageHide);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("beforeunload", onBeforeUnload);
+  window.removeEventListener("pagehide", onPageHide);
+
+  void discardRandomizedIso();
+});
+
+onBeforeRouteLeave(async () => {
+  if (!hasPendingResources.value) {
+    return;
+  }
+
+  const message =
+    randomizationState.value === "running"
+      ? "Randomization is still in progress. If you leave now, it will be cancelled and its temporary files will be discarded. Leave anyway?"
+      : "Your randomized ISO has not finished downloading. If you leave now, the download may be interrupted and its temporary files will be discarded. Leave anyway?";
+
+  if (!window.confirm(message)) {
+    return false;
+  }
+
+  await discardRandomizedIso();
+});
+
+function downloadFile(file: File, filename: string): void {
+  const url = URL.createObjectURL(file);
+
+  const anchor = document.createElement("a");
+
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.style.display = "none";
+
+  document.body.appendChild(anchor);
+
+  anchor.click();
+  anchor.remove();
+
+  /*
+   * Don't revoke synchronously.
+   * Let the browser start consuming it first.
+   */
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+  }, 60_000);
 }
 </script>
 
@@ -309,7 +478,7 @@ function continueFromIsoStep() {
           icon="i-lucide-arrow-right"
           size="md"
           class="cursor-pointer"
-          @click="currentStep = 4"
+          @click="startRandomization"
         >
           Continue
         </UButton>
@@ -318,15 +487,67 @@ function continueFromIsoStep() {
   </UPageCard>
 
   <!-- Step 4. Randomization -->
-  <DiscRandomizerLoader v-if="currentStep === 4" autoStart />
   <UPageCard
     v-if="currentStep === 4"
     title="Randomizing"
+    icon="i-lucide-disc-3"
     class="w-lg"
     :ui="{ body: 'w-full text-center' }"
   >
     <template #description>
-      <span>Please Wait...</span>
+      <div class="flex flex-col items-center gap-y-4">
+        <DiscRandomizerLoader autoStart />
+
+        <template v-if="randomizationState === 'running'">
+          <UProgress v-model="progressPercent" :max="100" class="w-full" />
+
+          <span>Randomizing... {{ progressPercent }}%</span>
+        </template>
+
+        <UAlert
+          v-else-if="randomizationState === 'complete'"
+          class="w-full text-left"
+          color="success"
+          variant="subtle"
+          icon="i-lucide-circle-check"
+          title="Randomization complete."
+          description="Your download has started. Temporary files are cleaned up when you leave this page."
+        />
+
+        <UAlert
+          v-else-if="randomizationState === 'error'"
+          class="w-full text-left"
+          color="error"
+          variant="subtle"
+          icon="i-lucide-triangle-alert"
+          title="Randomization failed."
+          :description="randomizationError ?? undefined"
+        />
+
+        <section
+          v-if="randomizationState !== 'running'"
+          class="flex flex-row-reverse gap-x-3 self-end"
+        >
+          <UButton
+            v-if="randomizationState === 'error'"
+            icon="i-lucide-rotate-ccw"
+            size="md"
+            class="cursor-pointer"
+            @click="retryRandomization"
+          >
+            Retry
+          </UButton>
+
+          <UButton
+            variant="outline"
+            size="md"
+            class="cursor-pointer"
+            @click="backToSettings"
+          >
+            Back
+          </UButton>
+        </section>
+      </div>
     </template>
   </UPageCard>
 </template>
