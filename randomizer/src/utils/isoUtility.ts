@@ -39,22 +39,19 @@ export async function read_UInt16(
   return value;
 }
 
-// #endregion
-
-// #region Encoding Memory
-
 /**
- * Encodes a UInt16 value as Little Endian bytes.
- * @param value The UInt16 value to encode.
- * @returns A Uint8Array containing the encoded bytes.
+ * Reads a UInt8 value from the ISO source at the specified offset.
+ * @param source The ISO source to read from.
+ * @param offset The offset within the ISO source to read the UInt8 value from.
+ * @returns The UInt8 value read from the specified offset.
  */
-export function encode_UInt16(value: number): Uint8Array {
-  const bytes = new Uint8Array(2);
-  const data = new DataView(bytes.buffer);
-
-  data.setUint16(0, value, true);
-
-  return bytes;
+export async function read_UInt8(
+  source: IsoSource,
+  offset: number,
+): Promise<number> {
+  const data = await readBytes(source, offset, 1);
+  const value = data.getUint8(0);
+  return value;
 }
 
 // #endregion

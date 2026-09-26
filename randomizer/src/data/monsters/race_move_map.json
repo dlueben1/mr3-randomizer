@@ -1,0 +1,3282 @@
+{
+  "0": [
+    {
+      "moveA": 0,
+      "name": "Tail Whip",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Lick",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Bite",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Suezo Beam",
+      "maxTechLevel": 6,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Deep Kiss",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "100 Fists",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Give Me",
+      "maxTechLevel": 6,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Noise",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Hypnosis",
+      "maxTechLevel": 6,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Meteor",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Psychokinesis",
+      "maxTechLevel": 4,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "1": [
+    {
+      "moveA": 0,
+      "name": "Monta",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Mocchiri",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Koloron",
+      "maxTechLevel": 8,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Tongue Lick",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Gagaccha",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Mossama",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Mocchi Spray",
+      "maxTechLevel": 6,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Monyuun",
+      "maxTechLevel": 4,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Mossaman",
+      "maxTechLevel": 6,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Mochiiki",
+      "maxTechLevel": 4,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 10,
+      "name": "Mocchi Cannon",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "2": [
+    {
+      "moveA": 0,
+      "name": "Jell Charge",
+      "maxTechLevel": 3,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Jell Sweep",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Jell Hammer",
+      "maxTechLevel": 5,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Jell Cannon",
+      "maxTechLevel": 8,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Jell Wall",
+      "maxTechLevel": 4,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Jell Hypnosis",
+      "maxTechLevel": 5,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Jell Swallow",
+      "maxTechLevel": 6,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Jell Combo",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Jell Swing",
+      "maxTechLevel": 6,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Jell Spa",
+      "maxTechLevel": 9,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Jell Missile",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "3": [
+    {
+      "moveA": 0,
+      "name": "Miminta",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Octopipi",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Octo Ink",
+      "maxTechLevel": 8,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Octo Beam",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Capoeira",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Flappe",
+      "maxTechLevel": 4,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Sniper",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Bubble Dance",
+      "maxTechLevel": 5,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Sucker",
+      "maxTechLevel": 6,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Octo Ball",
+      "maxTechLevel": 7,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 10,
+      "name": "Octo Balloon",
+      "maxTechLevel": 5,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "4": [
+    {
+      "moveA": 0,
+      "name": "Tail Whip",
+      "maxTechLevel": 8,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Machine Gun",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Dunk",
+      "maxTechLevel": 7,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Scratch",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Air Raid",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Spike",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Air Spin",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Spin Crush",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Sound Wave",
+      "maxTechLevel": 6,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Full",
+      "maxTechLevel": 5,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "5": [
+    {
+      "moveA": 0,
+      "name": "Finger Flick",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Slap",
+      "maxTechLevel": 8,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Mega Kick",
+      "maxTechLevel": 8,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Rocket Punch",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Rock Slide",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Atomic Punch",
+      "maxTechLevel": 6,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Magnifist",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Tornado Punch",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Olega Meteor",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "[0x35][0x34][0x34][0x34] Tons",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 10,
+      "name": "Pitch",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 11,
+      "name": "W Chop",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "6": [
+    {
+      "moveA": 0,
+      "name": "Tail Attack",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Tackle",
+      "maxTechLevel": 5,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Fireball",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Jump Kick",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Tail Slap",
+      "maxTechLevel": 7,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Charge",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Tear bite",
+      "maxTechLevel": 5,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Kick Lift",
+      "maxTechLevel": 7,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Spin Tail",
+      "maxTechLevel": 8,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Spiral",
+      "maxTechLevel": 5,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Great Fire",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 11,
+      "name": "Hero Kick",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "7": [
+    {
+      "moveA": 0,
+      "name": "Tiger Spike",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Tiger Fang",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Tiger Charge",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Somersault",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Tiger Step",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Thunder Bash",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Howl",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Tiger Combo",
+      "maxTechLevel": 6,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Moon Assault",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Tiger Force",
+      "maxTechLevel": 3,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "8": [
+    {
+      "moveA": 0,
+      "name": "Mini Punch",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Uncho",
+      "maxTechLevel": 6,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Muhha",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Spin Bang",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Jidanda",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Surprise",
+      "maxTechLevel": 7,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Bullet Head",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Spring Kick",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Spin Upper",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Furry Furry",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "9": [
+    {
+      "moveA": 0,
+      "name": "Head",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Poko Punch",
+      "maxTechLevel": 4,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Scratch",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Hawaiian",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Meow",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Zap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "[0x35][0x34][0x5A][0x35][0x34]",
+      "maxTechLevel": 7,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Cat Fan",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Idol",
+      "maxTechLevel": 6,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Cat Fool",
+      "maxTechLevel": 5,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "10": [
+    {
+      "moveA": 0,
+      "name": "Beaban",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Back Fist",
+      "maxTechLevel": 5,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Horn Sweep",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Super Charge",
+      "maxTechLevel": 6,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Vibrato",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Kachiage",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Beattack",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Gululubang",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Beakrocket",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Beaklariat",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "11": [
+    {
+      "moveA": 0,
+      "name": "Dragon Tail",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Fire",
+      "maxTechLevel": 6,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Dragon Bite",
+      "maxTechLevel": 6,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Wing Storm",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Mega Stomp",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Grave Throw",
+      "maxTechLevel": 7,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Inferno",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Wing Blade",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Salamander",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Zero Gravity",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "12": [
+    {
+      "moveA": 0,
+      "name": "Bow",
+      "maxTechLevel": 4,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Ab Boomerang",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Head Throw",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Bad Feeling",
+      "maxTechLevel": 7,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Random Hit",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Head Swing",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Three Piece",
+      "maxTechLevel": 7,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Bomb",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Self Bomb",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Fan",
+      "maxTechLevel": 5,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "13": [
+    {
+      "moveA": 0,
+      "name": "Ear Slap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Lick",
+      "maxTechLevel": 5,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Sneeze",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Baku Advance",
+      "maxTechLevel": 7,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Bow Wow",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Jidanda",
+      "maxTechLevel": 7,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Roll Breath",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Suck",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Play",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Sleep",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Sea of Tears",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "14": [
+    {
+      "moveA": 0,
+      "name": "Somersault",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Raycast",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Wind Lance",
+      "maxTechLevel": 5,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Star Light",
+      "maxTechLevel": 4,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Fairy Dust",
+      "maxTechLevel": 3,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Star Gather",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Milky Way",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Heal Ring",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Silky Dance",
+      "maxTechLevel": 4,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Fairy Kiss",
+      "maxTechLevel": 8,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Heart Breaker",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 11,
+      "name": "Element Guard",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "15": [
+    {
+      "moveA": 0,
+      "name": "Twin Legs",
+      "maxTechLevel": 8,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Thunder Wind",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Lightning",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Avalanch",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Whirlwind",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Stray Bolts",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Gust",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Strong Gust",
+      "maxTechLevel": 4,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Heaven Bolt",
+      "maxTechLevel": 6,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Mine",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "16": [
+    {
+      "moveA": 0,
+      "name": "Needle Cutter",
+      "maxTechLevel": 8,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Heavy Punch",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Poison Shower",
+      "maxTechLevel": 7,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Double Claw",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Energy Throw",
+      "maxTechLevel": 7,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Screw Dive",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Hedge Cutter",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Bone Breaker",
+      "maxTechLevel": 4,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Energy Drain",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Power Combo",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "17": [
+    {
+      "moveA": 0,
+      "name": "Upper Attack",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Slash",
+      "maxTechLevel": 5,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Death Size",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Death Claw",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Air Slash",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Evil Spirit",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Chaos Slash",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Dark Flame",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Death Gate",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Phantom Cross",
+      "maxTechLevel": 8,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "18": [
+    {
+      "moveA": 0,
+      "name": "Pinball",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Swing",
+      "maxTechLevel": 3,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Rolling",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Go Go Go",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Big Spin",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Thundader",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Balance",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Koro Rocket",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Black Hole",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Balibo",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 10,
+      "name": "Meeting",
+      "maxTechLevel": 4,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "19": [
+    {
+      "moveA": 0,
+      "name": "Stab",
+      "maxTechLevel": 4,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Slap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Pollen",
+      "maxTechLevel": 5,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Flower Dance",
+      "maxTechLevel": 3,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Flowercopter",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Seed Gatling",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Flower Storm",
+      "maxTechLevel": 6,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Root Uppercut",
+      "maxTechLevel": 6,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Drain",
+      "maxTechLevel": 5,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Butterfly",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Chew",
+      "maxTechLevel": 5,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "20": [
+    {
+      "moveA": 0,
+      "name": "Drill Punch",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Mega Blade",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Beam",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Core Attack",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Remote Punch",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Giga Blade",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Ion Cannon",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Force Bomber",
+      "maxTechLevel": 4,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Giga Shooter",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Mixing Echo",
+      "maxTechLevel": 4,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Ray Field",
+      "maxTechLevel": 2,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "21": [
+    {
+      "moveA": 0,
+      "name": "Single Shot",
+      "maxTechLevel": 3,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Sonic Knife",
+      "maxTechLevel": 7,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Double Summer",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Leg Arc",
+      "maxTechLevel": 7,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Meteor Drive",
+      "maxTechLevel": 5,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Reverse Raid",
+      "maxTechLevel": 7,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Rising Rave",
+      "maxTechLevel": 6,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Axes Ballet",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Assault Dance",
+      "maxTechLevel": 9,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Stunner Blitz",
+      "maxTechLevel": 6,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Far Sight",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 11,
+      "name": "Mirage Shift",
+      "maxTechLevel": 4,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "22": [
+    {
+      "moveA": 0,
+      "name": "Fin Slap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Tail Whip",
+      "maxTechLevel": 5,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Lesihorne",
+      "maxTechLevel": 5,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Head Slap",
+      "maxTechLevel": 6,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Sole",
+      "maxTechLevel": 9,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Show Time",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Water Gun",
+      "maxTechLevel": 6,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Boomerang",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Submerge",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Tsunami",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "23": [
+    {
+      "moveA": 0,
+      "name": "Pokorin",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Pokkorin",
+      "maxTechLevel": 7,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Ring Ring Hat",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Aim Hit",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Cover Hit",
+      "maxTechLevel": 5,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Aim Boom",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Dizzy",
+      "maxTechLevel": 6,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Ringx[0x37]",
+      "maxTechLevel": 4,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Share Pain",
+      "maxTechLevel": 6,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Bowling",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Do Mi So",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "24": [
+    {
+      "moveA": 0,
+      "name": "Mosin",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Back Spin",
+      "maxTechLevel": 5,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Bass Blast",
+      "maxTechLevel": 4,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Drifting",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Zero to Sixty",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Large Roller",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Wohoho",
+      "maxTechLevel": 6,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Glider",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Spin",
+      "maxTechLevel": 9,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Cannonball",
+      "maxTechLevel": 5,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "25": [
+    {
+      "moveA": 0,
+      "name": "Knock",
+      "maxTechLevel": 8,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Magic Hand",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 2,
+      "name": "Boomerang",
+      "maxTechLevel": 6,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Cracker",
+      "maxTechLevel": 5,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Pitching",
+      "maxTechLevel": 7,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Trumpet Rush",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Surprise",
+      "maxTechLevel": 9,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 7,
+      "name": "Heavy Attack",
+      "maxTechLevel": 5,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Blow Arrow",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Empty",
+      "maxTechLevel": 4,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "26": [
+    {
+      "moveA": 0,
+      "name": "Headbang",
+      "maxTechLevel": 7,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Punch In",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Dig",
+      "maxTechLevel": 4,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Scratch",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Break Spin",
+      "maxTechLevel": 6,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Ground Beat",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Head Spin",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Sand Loop",
+      "maxTechLevel": 9,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Dig Mosh",
+      "maxTechLevel": 7,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "The Earth",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "27": [
+    {
+      "moveA": 0,
+      "name": "Judo Chop",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Heel Drop",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Plow Kick",
+      "maxTechLevel": 6,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Smash Fist",
+      "maxTechLevel": 9,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 4,
+      "name": "Atomic Fist",
+      "maxTechLevel": 6,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Jumping Kick",
+      "maxTechLevel": 8,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 6,
+      "name": "Spin Knuckle",
+      "maxTechLevel": 8,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Head Clasher",
+      "maxTechLevel": 8,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Phoenix Combo",
+      "maxTechLevel": 7,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Eagle Rush",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 10,
+      "name": "Hell Arrow",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ],
+  "28": [
+    {
+      "moveA": 0,
+      "name": "Thuk Thuk",
+      "maxTechLevel": 7,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Ear Slap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Thunderbolt",
+      "maxTechLevel": 7,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 3,
+      "name": "Gang Raid",
+      "maxTechLevel": 7,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Flame Breath",
+      "maxTechLevel": 6,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 5,
+      "name": "Javelin",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Turn Stab",
+      "maxTechLevel": 6,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Skewer",
+      "maxTechLevel": 9,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 8,
+      "name": "Gang Bomb",
+      "maxTechLevel": 7,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 9,
+      "name": "Balloon Pop",
+      "maxTechLevel": 8,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Gang Dance",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 11,
+      "name": "Crane",
+      "maxTechLevel": 7,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    }
+  ],
+  "29": [
+    {
+      "moveA": 0,
+      "name": "Fin Slap",
+      "maxTechLevel": 7,
+      "categoryCode": "0x03",
+      "category": "Bit",
+      "element": "Aurora",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 1,
+      "name": "Tail Slap",
+      "maxTechLevel": 9,
+      "categoryCode": "0x02",
+      "category": "Bit",
+      "element": "Jade",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 2,
+      "name": "Accel Spin",
+      "maxTechLevel": 7,
+      "categoryCode": "0x00",
+      "category": "Bit",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 3,
+      "name": "Ultrasonics",
+      "maxTechLevel": 9,
+      "categoryCode": "0x01",
+      "category": "Bit",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 4,
+      "name": "Final Dance",
+      "maxTechLevel": 6,
+      "categoryCode": "0x04",
+      "category": "Stone",
+      "element": "Flare",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 5,
+      "name": "Squall",
+      "maxTechLevel": 7,
+      "categoryCode": "0x06",
+      "category": "Stone",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 6,
+      "name": "Jet Fish",
+      "maxTechLevel": 8,
+      "categoryCode": "0x05",
+      "category": "Stone",
+      "element": "Aqua",
+      "typeFlag": 0,
+      "type": "Power"
+    },
+    {
+      "moveA": 7,
+      "name": "Ice Beam",
+      "maxTechLevel": 7,
+      "categoryCode": "0x07",
+      "category": "Stone",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 8,
+      "name": "Torrent",
+      "maxTechLevel": 7,
+      "categoryCode": "0x09",
+      "category": "Orb",
+      "element": "Aqua",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 9,
+      "name": "Vortex",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0B",
+      "category": "Orb",
+      "element": "Aurora",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 10,
+      "name": "Un[0x41]deux[0x41]trois",
+      "maxTechLevel": 8,
+      "categoryCode": "0x08",
+      "category": "Orb",
+      "element": "Flare",
+      "typeFlag": 1,
+      "type": "Intellect"
+    },
+    {
+      "moveA": 11,
+      "name": "Earth wave",
+      "maxTechLevel": 8,
+      "categoryCode": "0x0A",
+      "category": "Orb",
+      "element": "Jade",
+      "typeFlag": 1,
+      "type": "Intellect"
+    }
+  ]
+}

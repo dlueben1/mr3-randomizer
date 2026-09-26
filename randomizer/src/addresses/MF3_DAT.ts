@@ -10,11 +10,18 @@ export const MF3_DAT = 0x0011f800;
  */
 export const TABLE_B_START = 0x008aa000;
 
+export const TABLE_B_BREED_OFFSET = 0x20;
 export const TABLE_B_LIF_OFFSET = 0x24;
 export const TABLE_B_POW_OFFSET = 0x26;
 export const TABLE_B_INT_OFFSET = 0x28;
 export const TABLE_B_SPD_OFFSET = 0x2a;
 export const TABLE_B_DEF_OFFSET = 0x2c;
+
+/**
+ * The offset within a non-rival monster's record where its moveset begins.
+ * Each byte alternates move ID / move level for 8 bytes total.
+ */
+export const TABLE_B_MOVES_OFFSET = 0x30;
 
 /**
  * The offset/lookup table for non-rival monsters in TABLE_B of MF3.DAT
