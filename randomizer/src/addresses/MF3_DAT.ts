@@ -24,6 +24,13 @@ export const TABLE_B_DEF_OFFSET = 0x2c;
 export const TABLE_B_MOVES_OFFSET = 0x30;
 
 /**
+ * The offset within a non-rival monster's record where it's additional traits begin.
+ * Interestingly, despite no records in Table B seemingly setting these values, it's supported
+ * to add multiple additional traits - woohoo!
+ */
+export const TABLE_B_TRAITS_OFFSET = 0x38;
+
+/**
  * The offset/lookup table for non-rival monsters in TABLE_B of MF3.DAT
  */
 export const TABLE_B_OFFSET_TABLE = 0x008aa0f0;

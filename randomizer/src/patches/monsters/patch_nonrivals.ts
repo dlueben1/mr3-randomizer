@@ -17,13 +17,16 @@ import {
   TABLE_B_DEF_OFFSET,
   TABLE_B_SPD_OFFSET,
   TABLE_B_MOVES_OFFSET,
+  TABLE_B_TRAITS_OFFSET,
 } from "../../addresses/MF3_DAT";
 import { encodeMr3Text } from "../../utils/textUtility";
 import { IsoPatch } from "../../types";
 import _ from "lodash";
 import { BREED_COUNT } from "../../data/consts";
-import raceHaseiMapJson from "../../data/monsters/race_hasei_map.json";
 import { generateMoveset, randomTechLevel } from "../../utils/monsterUtility";
+import raceHaseiMapJson from "../../data/monsters/race_hasei_map.json";
+import raceHaseiTraitMapJson from "../../data/monsters/race_trait_map.json";
+import combatTraitSelectors from "../../data/monsters/combat_trait_selectors.json";
 
 /**
  * The number of non-rival monsters in the game.
@@ -34,6 +37,17 @@ const NON_RIVAL_MONSTER_COUNT = 125;
  * Lookup table of valid values for `hasei` (variant) for each breed of monster
  */
 const RACE_HASEI_MAP: Record<number, number[]> = raceHaseiMapJson;
+
+/**
+ * Collection of trait eligibility criteria for each monster race/hasei combo
+ */
+const RACE_HASEI_TRAIT_LIST: MonsterTraitEligibility[] = raceHaseiTraitMapJson;
+
+/**
+ * List of the traits that are interesting/relevant to combat to filter against
+ * (so we don't add traits that are only relevant outside of combat)
+ */
+const COMBAT_TRAIT_SELECTORS: number[] = combatTraitSelectors;
 
 /**
  * The size of each record in TABLE_B of MR3.dat.
@@ -100,7 +114,7 @@ export async function randomizeNonRivalMonsters(
       const jitter = _.random(-jitterPercentage, jitterPercentage);
       const amount = stats[j] * jitter;
       const stat = stats[j] + amount;
-      const clampedStat = _.clamp(Math.round(stat), 0, 999);
+      const clampedStat = _.clamp(Math.round(stat), 1, 999);
       stats[j] = clampedStat;
     }
     logger?.(
@@ -192,9 +206,37 @@ export async function randomizeNonRivalMonsters(
       offset: recordAddress + TABLE_B_MOVES_OFFSET,
       data: encodedMoves,
     });
+
+    /** Generate an Additional Trait (adding more than one is oddly complex because they can clobber) */
+
+    // Determine the eligible traits for this monster based on its race and hasei
+    const myRaceHaseiTraitOptions: MonsterTraitEligibility =
+      RACE_HASEI_TRAIT_LIST.filter(
+        (entry) => entry.race === breed && entry.hasei === (hasei ?? 0),
+      )[0];
+    const possibleTraits = myRaceHaseiTraitOptions!.guaranteedSelectors.filter(
+      (trait) => COMBAT_TRAIT_SELECTORS.includes(trait),
+    );
+    const randomTrait: number | undefined = _.sample(possibleTraits);
+
+    // Create a patch for this monster's additional trait
+    if (randomTrait !== undefined) {
+      const encodedTrait = new Uint8Array(2);
+      view = new DataView(encodedTrait.buffer);
+      view.setUint8(0, randomTrait); // The new trait
+      view.setUint8(1, 0xff); // The terminator to show there are no other new traits to check/add
+      patches.push({
+        offset: recordAddress + TABLE_B_TRAITS_OFFSET,
+        data: encodedTrait,
+      });
+      logger?.(
+        `Monster ${names[i]} received trait ${randomTrait.toString(16)}`,
+      );
+    }
   }
 
   // Step 4. Return the collection of non-rival monster patches
   logger?.("Finished randomizing non-rival monsters!");
+  logger?.("Behold, the birth of a randomizer!");
   return patches;
 }

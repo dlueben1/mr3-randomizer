@@ -1,4 +1,5 @@
 import { randomizeNonRivalMonsters } from "./patches/monsters/patch_nonrivals";
+import { randomizeStarterMonsters } from "./patches/monsters/patch_starter_monsters";
 import type { IsoOutput, IsoSource } from "./types";
 import { getMonsterNames } from "./utils/nameUtility";
 
@@ -26,9 +27,11 @@ export async function randomizeIso(
     source,
     logger,
   );
+  onProgress?.(PHASE_SIZE / 2);
+  const starterMonsterPatches = await randomizeStarterMonsters(logger);
 
   // Merge all patches into a single array
-  const allPatches = [...nonRivalMonsterPatches];
+  const allPatches = [...nonRivalMonsterPatches, ...starterMonsterPatches];
   onProgress?.(PHASE_SIZE);
 
   // Phase #2: Copy the ISO content to the output ISO (yes I know this could be done in two passes but I'm intimidated)

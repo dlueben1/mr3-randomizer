@@ -27,3 +27,12 @@ interface MonsterMove {
   /** Interpreted move type, such as Power or Intellect. */
   type: "Power" | "Intellect";
 }
+
+/**
+ * Represents the eligibility criteria for a monster to have certain traits.
+ */
+interface MonsterTraitEligibility {
+  race: number;
+  hasei: number;
+  guaranteedSelectors: number[];
+}
