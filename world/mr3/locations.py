@@ -4,7 +4,8 @@ from BaseClasses import Location, LocationProgressType
 class MR3Location(Location):
     game = "Monster Rancher 3"
 
-all_locations = {
+# All Locations on the "Rank" progression axis
+rank_locations = {
     # Tochikan Festas (Rank Progression)
     "Tochikan Festa - Rank E": 1,
     "Tochikan Festa - Rank D": 2,
@@ -56,6 +57,103 @@ all_locations = {
     "Goat Big Tournament": 64,    # Goat S
 }
 
+# All Locations limited to a specific region
+regional_locations = {
+    # All Ran Ran locations to search
+    "Morx Ran Ran - Visit Lord": 100,
+    "Morx Ran Ran - Noisy Hall 1": 101,
+    "Morx Ran Ran - Noisy Hall 2": 102,
+    "Morx Ran Ran - Noisy Hall 3": 103,
+    "Morx Ran Ran - Bad Feeling Spot 1": 104,
+    "Morx Ran Ran - Bad Feeling Spot 2": 105,
+    "Morx Ran Ran - Bad Feeling Spot 3": 106,
+    "Morx Ran Ran - Discover Light Learn": 107,
+    "Morx Ran Ran - Discover Tunnel": 108,
+    "Morx Ran Ran - Discover Hit Moles": 109,
+    "Morx Ran Ran - Generic Spot 1": 110,
+    "Morx Ran Ran - Generic Spot 2": 111,
+    "Morx Ran Ran - Generic Spot 3": 112,
+    "Morx Ran Ran - Generic Spot 4": 113,
+    "Morx Ran Ran - Generic Spot 5": 114,
+    "Morx Ran Ran - Generic Spot 6": 115,
+    "Morx Ran Ran - Generic Spot 7": 116,
+    "Morx Ran Ran - Generic Spot 8": 117,
+    "Morx Ran Ran - Generic Spot 9": 118,
+    "Morx Ran Ran - Generic Spot 10": 119,
+    "Takrama Ran Ran - Visit Lord": 120,
+    "Takrama Ran Ran - Noisy Hall 1": 121,
+    "Takrama Ran Ran - Noisy Hall 2": 122,
+    "Takrama Ran Ran - Noisy Hall 3": 123,
+    "Takrama Ran Ran - Bad Feeling Spot 1": 124,
+    "Takrama Ran Ran - Bad Feeling Spot 2": 125,
+    "Takrama Ran Ran - Bad Feeling Spot 3": 126,
+    "Takrama Ran Ran - Discover Tornado": 127,
+    "Takrama Ran Ran - Discover Real Thing": 128,
+    "Takrama Ran Ran - Discover Daruma Rock": 129,
+    "Takrama Ran Ran - Generic Spot 1": 130,
+    "Takrama Ran Ran - Generic Spot 2": 131,
+    "Takrama Ran Ran - Generic Spot 3": 132,
+    "Takrama Ran Ran - Generic Spot 4": 133,
+    "Takrama Ran Ran - Generic Spot 5": 134,
+    "Takrama Ran Ran - Generic Spot 6": 135,
+    "Takrama Ran Ran - Generic Spot 7": 136,
+    "Takrama Ran Ran - Generic Spot 8": 137,
+    "Takrama Ran Ran - Generic Spot 9": 138,
+    "Takrama Ran Ran - Generic Spot 10": 139,
+    "Kalaragi Ran Ran - Visit Lord": 140,
+    "Kalaragi Ran Ran - Noisy Hall 1": 141,
+    "Kalaragi Ran Ran - Noisy Hall 2": 142,
+    "Kalaragi Ran Ran - Noisy Hall 3": 143,
+    "Kalaragi Ran Ran - Bad Feeling Spot 1": 144,
+    "Kalaragi Ran Ran - Bad Feeling Spot 2": 145,
+    "Kalaragi Ran Ran - Bad Feeling Spot 3": 146,
+    "Kalaragi Ran Ran - Discover Life Risk": 147,
+    "Kalaragi Ran Ran - Discover Chase": 148,
+    "Kalaragi Ran Ran - Discover Fishing": 149,
+    "Kalaragi Ran Ran - Generic Spot 1": 150,
+    "Kalaragi Ran Ran - Generic Spot 2": 151,
+    "Kalaragi Ran Ran - Generic Spot 3": 152,
+    "Kalaragi Ran Ran - Generic Spot 4": 153,
+    "Kalaragi Ran Ran - Generic Spot 5": 154,
+    "Kalaragi Ran Ran - Generic Spot 6": 155,
+    "Kalaragi Ran Ran - Generic Spot 7": 156,
+    "Kalaragi Ran Ran - Generic Spot 8": 157,
+    "Kalaragi Ran Ran - Generic Spot 9": 158,
+    "Kalaragi Ran Ran - Generic Spot 10": 159,
+    "Brillia Ran Ran - Visit Lord": 160,
+    "Brillia Ran Ran - Noisy Hall 1": 161,
+    "Brillia Ran Ran - Noisy Hall 2": 162,
+    "Brillia Ran Ran - Noisy Hall 3": 163,
+    "Brillia Ran Ran - Bad Feeling Spot 1": 164,
+    "Brillia Ran Ran - Bad Feeling Spot 2": 165,
+    "Brillia Ran Ran - Bad Feeling Spot 3": 166,
+    "Brillia Ran Ran - Discover Cross Seal": 167,
+    "Brillia Ran Ran - Discover Dodge Seal": 168,
+    "Brillia Ran Ran - Discover Dig Seal": 169,
+    "Goat Ran Ran - Visit Lord": 170,
+    "Goat Ran Ran - Noisy Hall 1": 171,
+    "Goat Ran Ran - Noisy Hall 2": 172,
+    "Goat Ran Ran - Noisy Hall 3": 173,
+    "Goat Ran Ran - Bad Feeling Spot 1": 174,
+    "Goat Ran Ran - Bad Feeling Spot 2": 175,
+    "Goat Ran Ran - Bad Feeling Spot 3": 176,
+    "Goat Ran Ran - Discover Blowfish": 177,
+    "Goat Ran Ran - Discover Swirl": 178,
+    "Goat Ran Ran - Discover Search": 179,
+    "Goat Ran Ran - Generic Spot 1": 180,
+    "Goat Ran Ran - Generic Spot 2": 181,
+    "Goat Ran Ran - Generic Spot 3": 182,
+    "Goat Ran Ran - Generic Spot 4": 183,
+    "Goat Ran Ran - Generic Spot 5": 184,
+    "Goat Ran Ran - Generic Spot 6": 185,
+    "Goat Ran Ran - Generic Spot 7": 186,
+    "Goat Ran Ran - Generic Spot 8": 187,
+    "Goat Ran Ran - Generic Spot 9": 188,
+    "Goat Ran Ran - Generic Spot 10": 189,
+
+    # TODO: Shop locations
+}
+
 # Generation-only event locations (These intentionally have no AP location IDs)
 event_locations = {
     "Cleared Rank E Tochikan",
@@ -66,7 +164,53 @@ event_locations = {
     "Cleared Rank S Tochikan",
 }
 
+all_locations = {**rank_locations, **regional_locations}
+
 location_groups = {
+    "Ran Ran Lords":
+    {
+        "Kalaragi Ran Ran - Visit Lord",
+        "Brillia Ran Ran - Visit Lord",
+        "Goat Ran Ran - Visit Lord",
+        "Morx Ran Ran - Visit Lord",
+        "Takrama Ran Ran - Visit Lord"
+    },
+    "Ran Ran Noisy Halls":
+    {
+        "Kalaragi Ran Ran - Noisy Hall 1",
+        "Kalaragi Ran Ran - Noisy Hall 2",
+        "Kalaragi Ran Ran - Noisy Hall 3",
+        "Brillia Ran Ran - Noisy Hall 1",
+        "Brillia Ran Ran - Noisy Hall 2",
+        "Brillia Ran Ran - Noisy Hall 3",
+        "Goat Ran Ran - Noisy Hall 1",
+        "Goat Ran Ran - Noisy Hall 2",
+        "Goat Ran Ran - Noisy Hall 3",
+        "Morx Ran Ran - Noisy Hall 1",
+        "Morx Ran Ran - Noisy Hall 2",
+        "Morx Ran Ran - Noisy Hall 3",
+        "Takrama Ran Ran - Noisy Hall 1",
+        "Takrama Ran Ran - Noisy Hall 2",
+        "Takrama Ran Ran - Noisy Hall 3"
+    },
+    "Ran Ran Bad Feeling Spots":
+    {
+        "Kalaragi Ran Ran - Bad Feeling Spot 1",
+        "Kalaragi Ran Ran - Bad Feeling Spot 2",
+        "Kalaragi Ran Ran - Bad Feeling Spot 3",
+        "Brillia Ran Ran - Bad Feeling Spot 1",
+        "Brillia Ran Ran - Bad Feeling Spot 2",
+        "Brillia Ran Ran - Bad Feeling Spot 3",
+        "Goat Ran Ran - Bad Feeling Spot 1",
+        "Goat Ran Ran - Bad Feeling Spot 2",
+        "Goat Ran Ran - Bad Feeling Spot 3",
+        "Morx Ran Ran - Bad Feeling Spot 1",
+        "Morx Ran Ran - Bad Feeling Spot 2",
+        "Morx Ran Ran - Bad Feeling Spot 3",
+        "Takrama Ran Ran - Bad Feeling Spot 1",
+        "Takrama Ran Ran - Bad Feeling Spot 2",
+        "Takrama Ran Ran - Bad Feeling Spot 3"
+    },
     "Big 5 Tournaments":
     {
         "Morx All Stars",
