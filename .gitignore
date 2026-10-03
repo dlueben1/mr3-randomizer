@@ -27,3 +27,5 @@ dist-ssr
 auto-imports.d.ts
 components.d.ts
 
+# Ignore my env
+.env
