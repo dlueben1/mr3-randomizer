@@ -49,7 +49,7 @@ rank_locations = {
     "Blizzard Cup": 53,           # Brillia A
     "Maelstrom Cup": 54,          # Goat A
 
-    # Rank S Tournaments
+    # Big 5 Tournaments
     "Morx All Stars": 60,         # Morx S
     "Takrama Heat Challenge": 61, # Takrama S
     "Kalaragi Carnival": 62,      # Kalaragi S

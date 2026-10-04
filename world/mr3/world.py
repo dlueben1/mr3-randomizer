@@ -1,7 +1,7 @@
 from worlds.AutoWorld import World
 from .web_world import MR3Web
 from . import regions
-from .items import MR3Item, all_items
+from .items import MR3Item, all_items, event_items
 from .rules import set_rank_rules
 
 class MR3World(World):
@@ -21,6 +21,17 @@ class MR3World(World):
         name,
         data.classification,
         data.code,
+        self.player,
+    )
+
+  # Factory for Event (Fake) Items
+  def create_event(self, name: str) -> MR3Item:
+    data = event_items[name]
+
+    return MR3Item(
+        name,
+        data.classification,
+        None,
         self.player,
     )
 
